@@ -43,7 +43,11 @@ To run unit tests, you'll have to install vendors:
 
 Once done, build fixtures:
 
-    ./tests/reset_tests.sh
+    ./bin/prepare_tests.sh [--vendor mysql] [--user root] [--password]
+
+You can configure all connection parameters:
+
+    ./bin/prepare_tests.sh --vendor mysql --user myuser --password mypassword
 
 Now you can run unit tests:
 

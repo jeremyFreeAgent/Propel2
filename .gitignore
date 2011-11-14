@@ -5,3 +5,11 @@ tests/Fixtures/nestedset/build/
 tests/Fixtures/schemas/build/
 tests/Fixtures/treetest/build/
 vendor/
+build.properties
+build.properties-e
+tests/Fixtures/bookstore/runtime-conf.xml-e
+tests/Fixtures/bookstore/runtime-conf.xml
+tests/Fixtures/namespaced/runtime-conf.xml-e
+tests/Fixtures/namespaced/runtime-conf.xml
+tests/Fixtures/schemas/runtime-conf.xml-e
+tests/Fixtures/schemas/runtime-conf.xml
