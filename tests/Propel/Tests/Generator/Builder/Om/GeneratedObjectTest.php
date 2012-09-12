@@ -1080,12 +1080,18 @@ EOF;
         $coll->setModel('\Propel\Tests\Bookstore\Book');
 
         for ($i = 0; $i < 3; $i++) {
-            $coll[] = new Book();
+            $b = new Book();
+            $b->setTitle('Title ' . $i);
+            $b->setIsbn('1204' . $i);
+
+            $coll[] = $b;
         }
 
         $this->assertEquals(3, $coll->count());
 
         $a = new Author();
+        $a->setFirstName('Foo');
+        $a->setLastName('Bar');
         $a->setBooks($coll);
         $a->save();
 
@@ -1280,10 +1286,13 @@ EOF;
         foreach (array('foo', 'bar') as $title) {
             $b = new Book();
             $b->setTitle($title);
+            $b->setIsbn('1235');
             $books[] = $b;
         }
 
         $a = new Author();
+        $a->setFirstName('Foo');
+        $a->setLastName('Bar');
         $a->setBooks($books);
         $a->save();
 
@@ -1295,6 +1304,7 @@ EOF;
         foreach (array('bam', 'bom') as $title) {
             $b = new Book();
             $b->setTitle($title);
+            $b->setIsbn('1235');
             $books[] = $b;
         }
 
