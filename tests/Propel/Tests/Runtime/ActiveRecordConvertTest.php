@@ -35,7 +35,7 @@ class ActiveRecordConvertTest extends BookstoreTestBase
         $book = new Book();
         $book->setId(9012);
         $book->setTitle('Don Juan');
-        $book->setISBN('0140422161');
+        $book->setIsbn('0140422161');
         $book->setPrice(12.99);
         $book->setAuthor($author);
         $book->setPublisher($publisher);

@@ -351,7 +351,7 @@ class BasePeerTest extends BookstoreTestBase
         $book = BookPeer::doSelectOne($c, $con);
         $count = $con->getQueryCount();
         $book->setTitle($book->getTitle());
-        $book->setISBN($book->getISBN());
+        $book->setIsbn($book->getIsbn());
 
         try {
             $rowCount = BookPeer::doUpdate($book, $con);

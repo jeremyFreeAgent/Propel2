@@ -349,7 +349,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("Book Title");
-        $book->setISBN("1234");
+        $book->setIsbn("1234");
         $book->setPublisher($pub1);
         $book->save();
 
@@ -396,7 +396,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("BookTest");
-        $book->setISBN("TEST");
+        $book->setIsbn("TEST");
         $book->save();
         $bookId = $book->getId();
 
@@ -432,7 +432,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("Salt: A World History");
-        $book->setISBN("0142001619");
+        $book->setIsbn("0142001619");
         $book->setAuthor($author);
         $book->setPublisher($pub);
 
@@ -640,7 +640,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle("Test Book");
-        $book->setISBN("TT-EE-SS-TT");
+        $book->setIsbn("TT-EE-SS-TT");
 
         $num = 5;
 
@@ -692,7 +692,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $b = new Book();
         $b->setTitle("TestBook");
-        $b->setISBN("XX-XX-XX-XX");
+        $b->setIsbn("XX-XX-XX-XX");
         $b->save();
 
         $op = new BookOpinion();
@@ -1080,12 +1080,18 @@ EOF;
         $coll->setModel('\Propel\Tests\Bookstore\Book');
 
         for ($i = 0; $i < 3; $i++) {
-            $coll[] = new Book();
+            $b = new Book();
+            $b->setTitle('Title ' . $i);
+            $b->setIsbn('1204' . $i);
+
+            $coll[] = $b;
         }
 
         $this->assertEquals(3, $coll->count());
 
         $a = new Author();
+        $a->setFirstName('Foo');
+        $a->setLastName('Bar');
         $a->setBooks($coll);
         $a->save();
 
@@ -1280,10 +1286,13 @@ EOF;
         foreach (array('foo', 'bar') as $title) {
             $b = new Book();
             $b->setTitle($title);
+            $b->setIsbn('1235');
             $books[] = $b;
         }
 
         $a = new Author();
+        $a->setFirstName('Foo');
+        $a->setLastName('Bar');
         $a->setBooks($books);
         $a->save();
 
@@ -1295,6 +1304,7 @@ EOF;
         foreach (array('bam', 'bom') as $title) {
             $b = new Book();
             $b->setTitle($title);
+            $b->setIsbn('1235');
             $books[] = $b;
         }
 
