@@ -72,7 +72,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setISBN('TEST');
+        $book->setIsbn('TEST');
         // No save ...
 
         $this->assertEquals(0, count($list->getBookListRels()) );
@@ -106,7 +106,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setISBN('TEST');
+        $book->setIsbn('TEST');
         // No save (yet) ...
 
         $this->assertEquals(0, count($list->getBookListRels()) );
@@ -140,7 +140,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setISBN('TEST');
+        $book->setIsbn('TEST');
         // No save (yet) ...
 
         $this->assertEquals(0, count($list->getBookListRels()) );
@@ -233,7 +233,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setISBN('TEST');
+        $book->setIsbn('TEST');
 
         $list->addBook($book);
         $this->assertEquals(1, $list->countBooks(), 'addCrossFk() sets the internal collection properly');
@@ -299,7 +299,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
     {
         BookstoreDataPopulator::populate();
         $book = new Book();
-        $book->setISBN("Foo-bar-baz");
+        $book->setIsbn("Foo-bar-baz");
         $book->setTitle("The book title");
 
         // No save ...
@@ -347,18 +347,18 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle("A sample book");
-        $book->setISBN("INITIAL ISBN");
+        $book->setIsbn("INITIAL ISBN");
 
         $author->addBook($book);
 
         $author->save();
 
-        $book->setISBN("MODIFIED ISBN");
+        $book->setIsbn("MODIFIED ISBN");
 
         $books = $author->getBooks();
         $this->assertEquals(1, count($books), "Expected 1 book.");
         $this->assertSame($book, $books[0], "Expected the same object to be returned by fk accessor.");
-        $this->assertEquals("MODIFIED ISBN", $books[0]->getISBN(), "Expected the modified value NOT to have been overwritten.");
+        $this->assertEquals("MODIFIED ISBN", $books[0]->getIsbn(), "Expected the modified value NOT to have been overwritten.");
     }
 
     public function testFKGetterUseInstancePool()

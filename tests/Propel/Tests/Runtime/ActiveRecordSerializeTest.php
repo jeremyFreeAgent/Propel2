@@ -34,7 +34,7 @@ class ActiveRecordSerializeTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle('Foo1');
-        $book->setISBN('1234');
+        $book->setIsbn('1234');
         $sb = serialize($book);
         $this->assertEquals($book, unserialize($sb));
     }
@@ -43,7 +43,7 @@ class ActiveRecordSerializeTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle('Foo2');
-        $book->setISBN('1234');
+        $book->setIsbn('1234');
         $book->save();
         $sb = serialize($book);
         $this->assertEquals($book, unserialize($sb));
@@ -53,7 +53,7 @@ class ActiveRecordSerializeTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle('Foo3');
-        $book->setISBN('1234');
+        $book->setIsbn('1234');
         $book->save();
         BookPeer::clearInstancePool();
 
@@ -68,7 +68,7 @@ class ActiveRecordSerializeTest extends BookstoreTestBase
         $author->setFirstName('John');
         $book = new Book();
         $book->setTitle('Foo4');
-        $book->setISBN('1234');
+        $book->setIsbn('1234');
         $book->setAuthor($author);
         $book->save();
         $b = clone $book;
@@ -81,10 +81,10 @@ class ActiveRecordSerializeTest extends BookstoreTestBase
     {
         $book1 = new Book();
         $book1->setTitle('Foo5');
-        $book1->setISBN('1234');
+        $book1->setIsbn('1234');
         $book2 = new Book();
         $book2->setTitle('Foo6');
-        $book2->setISBN('1234');
+        $book2->setIsbn('1234');
         $author = new Author();
         $author->setFirstName('JAne');
         $author->addBook($book1);

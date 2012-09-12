@@ -2121,7 +2121,7 @@ class ModelCriteriaTest extends BookstoreTestBase
         $c = new ModelCriteria('bookstore', 'Propel\Tests\Bookstore\Book', 'b');
         $c->where('b.Title = ?', 'Don Juan');
         $book = $c->findOne();
-        $this->assertEquals('3456', $book->getISBN(), 'update() updates only the records matching the criteria');
+        $this->assertEquals('3456', $book->getIsbn(), 'update() updates only the records matching the criteria');
     }
 
     public function testUpdateUsingTableAlias()
@@ -2187,7 +2187,7 @@ class ModelCriteriaTest extends BookstoreTestBase
         $c = new ModelCriteria('bookstore', 'Propel\Tests\Bookstore\Book', 'b');
         $c->where('b.Title = ?', 'Don Juan');
         $book = $c->findOne();
-        $this->assertEquals('3456', $book->getISBN(), 'update() updates only the records matching the criteria');
+        $this->assertEquals('3456', $book->getIsbn(), 'update() updates only the records matching the criteria');
     }
 
     public static function conditionsForTestGetRelationName()

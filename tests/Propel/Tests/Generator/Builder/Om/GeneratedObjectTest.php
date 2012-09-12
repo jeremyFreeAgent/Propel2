@@ -349,7 +349,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("Book Title");
-        $book->setISBN("1234");
+        $book->setIsbn("1234");
         $book->setPublisher($pub1);
         $book->save();
 
@@ -396,7 +396,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("BookTest");
-        $book->setISBN("TEST");
+        $book->setIsbn("TEST");
         $book->save();
         $bookId = $book->getId();
 
@@ -432,7 +432,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("Salt: A World History");
-        $book->setISBN("0142001619");
+        $book->setIsbn("0142001619");
         $book->setAuthor($author);
         $book->setPublisher($pub);
 
@@ -640,7 +640,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle("Test Book");
-        $book->setISBN("TT-EE-SS-TT");
+        $book->setIsbn("TT-EE-SS-TT");
 
         $num = 5;
 
@@ -692,7 +692,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $b = new Book();
         $b->setTitle("TestBook");
-        $b->setISBN("XX-XX-XX-XX");
+        $b->setIsbn("XX-XX-XX-XX");
         $b->save();
 
         $op = new BookOpinion();
