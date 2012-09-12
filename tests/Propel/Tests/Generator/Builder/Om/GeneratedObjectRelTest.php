@@ -609,7 +609,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         $books = BookQuery::create()->find();
 
         $bookClubList = new BookClubList();
-        $bookClubList1->setGroupLeader('Something');
+        $bookClubList->setGroupLeader('Something');
         $bookClubList->setBooks($books);
         $bookClubList->save();
 
@@ -632,7 +632,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         BookListRelQuery::create()->deleteAll();
 
         $bookClubList = new BookClubList();
-        $bookClubList1->setGroupLeader('Something');
+        $bookClubList->setGroupLeader('Something');
         $bookClubList->setBooks(new ObjectCollection());
         $bookClubList->save();
 
