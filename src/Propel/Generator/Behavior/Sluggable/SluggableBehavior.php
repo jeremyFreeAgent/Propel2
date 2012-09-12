@@ -45,7 +45,7 @@ class SluggableBehavior extends Behavior
                 'name'     => $this->getParameter('slug_column'),
                 'type'     => 'VARCHAR',
                 'size'     => 255,
-                //'required' => false,
+                'required' => false,
             ));
             // add a unique to column
             $unique = new Unique($this->getColumnForParameter('slug_column'));
