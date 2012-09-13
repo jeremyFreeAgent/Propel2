@@ -177,7 +177,7 @@ class ObjectCollectionWithFixturesTest extends BookstoreEmptyTestBase
 
         $expected = array();
         foreach ($books as $book) {
-            $expected[$book->getTitle()] = $book->getISBN();
+            $expected[$book->getTitle()] = $book->getIsbn();
         }
         $booksArray = $books->toKeyValue('Title', 'ISBN');
         $this->assertEquals(4, count($booksArray));
@@ -185,7 +185,7 @@ class ObjectCollectionWithFixturesTest extends BookstoreEmptyTestBase
 
         $expected = array();
         foreach ($books as $book) {
-            $expected[$book->getISBN()] = $book->getTitle();
+            $expected[$book->getIsbn()] = $book->getTitle();
         }
         $booksArray = $books->toKeyValue('ISBN');
         $this->assertEquals($expected, $booksArray, 'toKeyValue() uses __toString() for the value if no second field name is passed');

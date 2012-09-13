@@ -72,7 +72,7 @@ class CharacterEncodingTest extends BookstoreTestBase
 
         $b = new Book();
         $b->setTitle($title);
-        $b->setISBN("B-59246");
+        $b->setIsbn("B-59246");
         $b->setAuthor($a);
         $b->setPublisher($p);
         $b->save();

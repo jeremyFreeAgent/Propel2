@@ -113,7 +113,7 @@ class BookstoreDataPopulator
 
         $phoenix = new Book();
         $phoenix->setTitle("Harry Potter and the Order of the Phoenix");
-        $phoenix->setISBN("043935806X");
+        $phoenix->setIsbn("043935806X");
         $phoenix->setAuthor($rowling);
         $phoenix->setPublisher($scholastic);
         $phoenix->setPrice(10.99);
@@ -121,7 +121,7 @@ class BookstoreDataPopulator
         $phoenix_id = $phoenix->getId();
 
         $qs = new Book();
-        $qs->setISBN("0380977427");
+        $qs->setIsbn("0380977427");
         $qs->setTitle("Quicksilver");
         $qs->setPrice(11.99);
         $qs->setAuthor($stephenson);
@@ -130,7 +130,7 @@ class BookstoreDataPopulator
         $qs_id = $qs->getId();
 
         $dj = new Book();
-        $dj->setISBN("0140422161");
+        $dj->setIsbn("0140422161");
         $dj->setTitle("Don Juan");
         $dj->setPrice(12.99);
         $dj->setAuthor($byron);
@@ -139,7 +139,7 @@ class BookstoreDataPopulator
         $dj_id = $dj->getId();
 
         $td = new Book();
-        $td->setISBN("067972575X");
+        $td->setIsbn("067972575X");
         $td->setTitle("The Tin Drum");
         $td->setPrice(13.99);
         $td->setAuthor($grass);
