@@ -452,7 +452,7 @@ class GeneratedPeerDoDeleteTest extends BookstoreEmptyTestBase
         for ($i=0; $i < 25; $i++) {
             $b = new Book();
             $b->setTitle("Book $i");
-            $b->setISBN("ISBN $i");
+            $b->setIsbn("ISBN $i");
             $b->save();
         }
 
@@ -490,7 +490,7 @@ class GeneratedPeerDoDeleteTest extends BookstoreEmptyTestBase
         for ($i=0; $i < 25; $i++) {
             $b = new Book();
             $b->setTitle("Book $i");
-            $b->setISBN("ISBN $i");
+            $b->setIsbn("ISBN $i");
             $b->save();
         }
 
@@ -538,7 +538,7 @@ class GeneratedPeerDoDeleteTest extends BookstoreEmptyTestBase
         $b = BookPeer::retrieveByPK($id);
         if (!$b) {
             $b = new Book();
-            $b->setTitle("Book$id")->setISBN("BookISBN$id")->save();
+            $b->setTitle("Book$id")->setIsbn("BookISBN$id")->save();
             $b1Id = $b->getId();
             $sql = "UPDATE " . BookPeer::TABLE_NAME . " SET id = ? WHERE id = ?";
             $stmt = $con->prepare($sql);

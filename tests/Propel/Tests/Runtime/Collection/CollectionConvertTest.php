@@ -31,7 +31,7 @@ class CollectionConvertTest extends BookstoreTestBase
         $book1 = new Book();
         $book1->setId(9012);
         $book1->setTitle('Don Juan');
-        $book1->setISBN('0140422161');
+        $book1->setIsbn('0140422161');
         $book1->setPrice(12.99);
         $book1->setAuthorId(5678);
         $book1->setPublisherId(1234);
@@ -39,7 +39,7 @@ class CollectionConvertTest extends BookstoreTestBase
         $book2 = new Book();
         $book2->setId(58);
         $book2->setTitle('Harry Potter and the Order of the Phoenix');
-        $book2->setISBN('043935806X');
+        $book2->setIsbn('043935806X');
         $book2->setPrice(10.99);
         $book2->resetModified();
 

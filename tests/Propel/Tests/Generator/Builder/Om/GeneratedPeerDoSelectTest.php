@@ -149,12 +149,12 @@ class GeneratedPeerDoSelectTest extends BookstoreEmptyTestBase
     {
         $b1 = new Book();
         $b1->setTitle("Test NULLFK 1");
-        $b1->setISBN("NULLFK-1");
+        $b1->setIsbn("NULLFK-1");
         $b1->save();
 
         $b2 = new Book();
         $b2->setTitle("Test NULLFK 2");
-        $b2->setISBN("NULLFK-2");
+        $b2->setIsbn("NULLFK-2");
         $b2->setAuthor(new Author());
         $b2->getAuthor()->setFirstName("Hans")->setLastName("L");
         $b2->save();
@@ -350,7 +350,7 @@ class GeneratedPeerDoSelectTest extends BookstoreEmptyTestBase
 
         $b1 = new Book();
         $b1->setTitle("Book1");
-        $b1->setISBN("ISBN-1");
+        $b1->setIsbn("ISBN-1");
         $b1->save();
 
         $r1 = new BookReader();
