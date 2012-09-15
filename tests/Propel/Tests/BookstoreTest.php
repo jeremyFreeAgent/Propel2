@@ -110,7 +110,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
         try {
             $phoenix = new Book();
             $phoenix->setTitle("Harry Potter and the Order of the Phoenix");
-            $phoenix->setIsbn("043935806X");
+            $phoenix->setISBN("043935806X");
             $phoenix->setAuthor($rowling);
             $phoenix->setPublisher($scholastic);
             $phoenix->save();
@@ -119,7 +119,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
             $this->assertFalse($scholastic->isNew(), 'saving book also saves related publisher');
 
             $qs = new Book();
-            $qs->setIsbn("0380977427");
+            $qs->setISBN("0380977427");
             $qs->setTitle("Quicksilver");
             $qs->setAuthor($stephenson);
             $qs->setPublisher($morrow);
@@ -127,7 +127,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
             $qs_id = $qs->getId();
 
             $dj = new Book();
-            $dj->setIsbn("0140422161");
+            $dj->setISBN("0140422161");
             $dj->setTitle("Don Juan");
             $dj->setAuthor($byron);
             $dj->setPublisher($penguin);
@@ -135,7 +135,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
             $dj_id = $qs->getId();
 
             $td = new Book();
-            $td->setIsbn("067972575X");
+            $td->setISBN("067972575X");
             $td->setTitle("The Tin Drum");
             $td->setAuthor($grass);
             $td->setPublisher($vintage);
@@ -462,7 +462,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
         try {
             $phoenix = new Book();
             $phoenix->setTitle("Harry Potter and the Order of the Phoenix");
-            $phoenix->setIsbn("043935806X");
+            $phoenix->setISBN("043935806X");
             $phoenix->setAuthor($rowling);
             $phoenix->setPublisher($scholastic);
             $phoenix->save();
@@ -471,7 +471,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
             $this->assertFalse($scholastic->isNew(), 'saving book also saves related publisher');
 
             $qs = new Book();
-            $qs->setIsbn("0380977427");
+            $qs->setISBN("0380977427");
             $qs->setTitle("Quicksilver");
             $qs->setAuthor($stephenson);
             $qs->setPublisher($morrow);
@@ -479,7 +479,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
             $qs_id = $qs->getId();
 
             $dj = new Book();
-            $dj->setIsbn("0140422161");
+            $dj->setISBN("0140422161");
             $dj->setTitle("Don Juan");
             $dj->setAuthor($byron);
             $dj->setPublisher($penguin);
@@ -487,7 +487,7 @@ class BookstoreTest extends BookstoreEmptyTestBase
             $dj_id = $qs->getId();
 
             $td = new Book();
-            $td->setIsbn("067972575X");
+            $td->setISBN("067972575X");
             $td->setTitle("The Tin Drum");
             $td->setAuthor($grass);
             $td->setPublisher($vintage);

@@ -349,7 +349,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("Book Title");
-        $book->setIsbn("1234");
+        $book->setISBN("1234");
         $book->setPublisher($pub1);
         $book->save();
 
@@ -396,7 +396,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("BookTest");
-        $book->setIsbn("TEST");
+        $book->setISBN("TEST");
         $book->save();
         $bookId = $book->getId();
 
@@ -432,7 +432,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $book = new Book();
         $book->setTitle("Salt: A World History");
-        $book->setIsbn("0142001619");
+        $book->setISBN("0142001619");
         $book->setAuthor($author);
         $book->setPublisher($pub);
 
@@ -473,7 +473,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('foo');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save();
         $this->assertFalse($b->isNew());
         $this->assertNotNull($b->getId());
@@ -641,7 +641,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle("Test Book");
-        $book->setIsbn("TT-EE-SS-TT");
+        $book->setISBN("TT-EE-SS-TT");
 
         $num = 5;
 
@@ -693,7 +693,7 @@ class GeneratedObjectTest extends BookstoreTestBase
 
         $b = new Book();
         $b->setTitle("TestBook");
-        $b->setIsbn("XX-XX-XX-XX");
+        $b->setISBN("XX-XX-XX-XX");
         $b->save();
 
         $op = new BookOpinion();
@@ -720,13 +720,13 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('Don Juan');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
 
         $arr1 = $b->toArray();
         $expectedKeys = array(
             'Id',
             'Title',
-            'Isbn',
+            'ISBN',
             'Price',
             'PublisherId',
             'AuthorId'
@@ -739,7 +739,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('Don Juan');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
 
         $arr1 = $b->toArray(BasePeer::TYPE_COLNAME);
         $expectedKeys = array(
@@ -1085,7 +1085,7 @@ EOF;
         for ($i = 0; $i < 3; $i++) {
             $b = new Book();
             $b->setTitle('Title ' . $i);
-            $b->setIsbn('1204' . $i);
+            $b->setISBN('1204' . $i);
 
             $coll[] = $b;
         }
@@ -1115,7 +1115,7 @@ EOF;
 
         $newBook = new Book();
         $newBook->setTitle('My New Book');
-        $newBook->setIsbn(1234);
+        $newBook->setISBN(1234);
 
         // Kind of new collection
         $coll = clone $coll;
@@ -1132,7 +1132,7 @@ EOF;
         // Add a new object
         $newBook1 = new Book();
         $newBook1->setTitle('My New Book1');
-        $newBook1->setIsbn(1256);
+        $newBook1->setISBN(1256);
 
         // Existing collection - The fix around reference is tested here.
         $coll[] = $newBook1;
@@ -1289,7 +1289,7 @@ EOF;
         foreach (array('foo', 'bar') as $title) {
             $b = new Book();
             $b->setTitle($title);
-            $b->setIsbn('1235');
+            $b->setISBN('1235');
             $books[] = $b;
         }
 
@@ -1307,7 +1307,7 @@ EOF;
         foreach (array('bam', 'bom') as $title) {
             $b = new Book();
             $b->setTitle($title);
-            $b->setIsbn('1235');
+            $b->setISBN('1235');
             $books[] = $b;
         }
 

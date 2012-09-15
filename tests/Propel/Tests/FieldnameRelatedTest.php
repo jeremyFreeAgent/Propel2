@@ -68,7 +68,7 @@ class FieldnameRelatedTest extends \PHPUnit_Framework_TestCase
             BasePeer::TYPE_STUDLYPHPNAME => array(
                 0 => 'id',
                 1 => 'title',
-                2 => 'iSBN',
+                2 => 'isbn',
                 3 => 'price',
                 4 => 'publisherId',
                 5 => 'authorId'
@@ -163,7 +163,7 @@ class FieldnameRelatedTest extends \PHPUnit_Framework_TestCase
             BasePeer::TYPE_STUDLYPHPNAME => array(
                 0 => 'id',
                 1 => 'title',
-                2 => 'iSBN',
+                2 => 'isbn',
                 3 => 'price',
                 4 => 'publisherId',
                 5 => 'authorId'
@@ -248,7 +248,7 @@ class FieldnameRelatedTest extends \PHPUnit_Framework_TestCase
         );
 
         $book = new Book();
-        $book->setIsbn("043935806X");
+        $book->setISBN("043935806X");
         $book->setTitle('Harry Potter and the Order of the Phoenix');
 
         $expected = 'Harry Potter and the Order of the Phoenix';
@@ -301,7 +301,7 @@ class FieldnameRelatedTest extends \PHPUnit_Framework_TestCase
             ),
             BasePeer::TYPE_STUDLYPHPNAME => array (
                 'title' => 'Harry Potter and the Order of the Phoenix',
-                'iSBN' => '043935806X'
+                'isbn' => '043935806X'
             ),
             BasePeer::TYPE_COLNAME => array (
                 'book.TITLE' => 'Harry Potter and the Order of the Phoenix',
@@ -351,13 +351,13 @@ class FieldnameRelatedTest extends \PHPUnit_Framework_TestCase
         $book = new Book();
         $book->fromArray(array (
             'Title' => 'Harry Potter and the Order of the Phoenix',
-            'Isbn' => '043935806X'
+            'ISBN' => '043935806X'
         ));
 
         $expecteds = array (
             BasePeer::TYPE_PHPNAME => array (
                 'Title' => 'Harry Potter and the Order of the Phoenix',
-                'Isbn' => '043935806X'
+                'ISBN' => '043935806X'
             ),
             BasePeer::TYPE_STUDLYPHPNAME => array (
                 'title' => 'Harry Potter and the Order of the Phoenix',

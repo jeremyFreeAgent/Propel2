@@ -185,7 +185,7 @@ class ArrayCollectionTest extends BookstoreEmptyTestBase
         $book = new Book();
         $book->setId(9012);
         $book->setTitle('Don Juan');
-        $book->setIsbn('0140422161');
+        $book->setISBN('0140422161');
         $book->setPrice(12.99);
         $book->setAuthor($author);
 

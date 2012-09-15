@@ -165,7 +165,7 @@ class QueryBuilderTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('bar');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save($this->con);
         $count = $this->con->getQueryCount();
 
@@ -180,7 +180,7 @@ class QueryBuilderTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('foo');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save($this->con);
         $count = $this->con->getQueryCount();
 
@@ -224,7 +224,7 @@ class QueryBuilderTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('foo');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save($this->con);
         BookPeer::clearInstancePool();
 
@@ -247,7 +247,7 @@ class QueryBuilderTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('foo');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save($this->con);
         BookPeer::clearInstancePool();
 
@@ -271,7 +271,7 @@ class QueryBuilderTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('foo');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save();
 
         $q = new mySecondBookQuery();

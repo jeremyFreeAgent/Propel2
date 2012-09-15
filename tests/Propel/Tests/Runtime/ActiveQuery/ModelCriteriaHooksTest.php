@@ -119,7 +119,7 @@ class ModelCriteriaHooksTest extends BookstoreTestBase
         $c->where('b.Title = ?', 'foo');
         $book = $c->findOne();
 
-        $this->assertEquals('1234', $book->getIsbn(), 'preUpdate() can modify the values');
+        $this->assertEquals('1234', $book->getISBN(), 'preUpdate() can modify the values');
     }
 
     public function testPostUpdate()

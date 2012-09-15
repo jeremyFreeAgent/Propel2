@@ -1655,7 +1655,7 @@ class ModelCriteriaTest extends BookstoreTestBase
         BookQuery::create()->deleteAll();
         $book = new Book();
         $book->setTitle('foo');
-        $book->setIsbn("043935806X");
+        $book->setISBN("043935806X");
         $book->setPrice(125);
         $book->save();
         $book = BookQuery::create('b')
@@ -1698,7 +1698,7 @@ class ModelCriteriaTest extends BookstoreTestBase
         BookQuery::create()->deleteAll($con);
         $book = new Book();
         $book->setTitle('Foo');
-        $book->setIsbn("043935806X");
+        $book->setISBN("043935806X");
         $book->setPrice(125);
         $book->save($con);
         $count = $con->getQueryCount();
@@ -2124,7 +2124,7 @@ class ModelCriteriaTest extends BookstoreTestBase
         $c = new ModelCriteria('bookstore', 'Propel\Tests\Bookstore\Book', 'b');
         $c->where('b.Title = ?', 'Don Juan');
         $book = $c->findOne();
-        $this->assertEquals('3456', $book->getIsbn(), 'update() updates only the records matching the criteria');
+        $this->assertEquals('3456', $book->getISBN(), 'update() updates only the records matching the criteria');
     }
 
     public function testUpdateUsingTableAlias()
@@ -2190,7 +2190,7 @@ class ModelCriteriaTest extends BookstoreTestBase
         $c = new ModelCriteria('bookstore', 'Propel\Tests\Bookstore\Book', 'b');
         $c->where('b.Title = ?', 'Don Juan');
         $book = $c->findOne();
-        $this->assertEquals('3456', $book->getIsbn(), 'update() updates only the records matching the criteria');
+        $this->assertEquals('3456', $book->getISBN(), 'update() updates only the records matching the criteria');
     }
 
     public static function conditionsForTestGetRelationName()

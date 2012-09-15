@@ -72,7 +72,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setIsbn('TEST');
+        $book->setISBN('TEST');
         // No save ...
 
         $this->assertEquals(0, count($list->getBookListRels()) );
@@ -106,7 +106,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setIsbn('TEST');
+        $book->setISBN('TEST');
         // No save (yet) ...
 
         $this->assertEquals(0, count($list->getBookListRels()) );
@@ -140,7 +140,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setIsbn('TEST');
+        $book->setISBN('TEST');
         // No save (yet) ...
 
         $this->assertEquals(0, count($list->getBookListRels()) );
@@ -233,7 +233,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle( "Jungle Expedition Handbook" );
-        $book->setIsbn('TEST');
+        $book->setISBN('TEST');
 
         $list->addBook($book);
         $this->assertEquals(1, $list->countBooks(), 'addCrossFk() sets the internal collection properly');
@@ -299,7 +299,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
     {
         BookstoreDataPopulator::populate();
         $book = new Book();
-        $book->setIsbn("Foo-bar-baz");
+        $book->setISBN("Foo-bar-baz");
         $book->setTitle("The book title");
 
         // No save ...
@@ -347,18 +347,18 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle("A sample book");
-        $book->setIsbn("INITIAL ISBN");
+        $book->setISBN("INITIAL ISBN");
 
         $author->addBook($book);
 
         $author->save();
 
-        $book->setIsbn("MODIFIED ISBN");
+        $book->setISBN("MODIFIED ISBN");
 
         $books = $author->getBooks();
         $this->assertEquals(1, count($books), "Expected 1 book.");
         $this->assertSame($book, $books[0], "Expected the same object to be returned by fk accessor.");
-        $this->assertEquals("MODIFIED ISBN", $books[0]->getIsbn(), "Expected the modified value NOT to have been overwritten.");
+        $this->assertEquals("MODIFIED ISBN", $books[0]->getISBN(), "Expected the modified value NOT to have been overwritten.");
     }
 
     public function testFKGetterUseInstancePool()
@@ -409,7 +409,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         for ($i = 0; $i < 10; $i++) {
             $b = new Book();
             $b->setTitle('My Book ' . $i);
-            $b->setIsbn($i);
+            $b->setISBN($i);
 
             $books[] = $b;
         }
@@ -429,7 +429,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         $i = 0;
         foreach ($bookClubList1->getBooks() as $book) {
             $this->assertEquals('My Book ' . $i, $book->getTitle());
-            $this->assertEquals($i++, $book->getIsbn());
+            $this->assertEquals($i++, $book->getISBN());
         }
 
         // Remove an element
@@ -447,7 +447,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         // Add a new object
         $newBook = new Book();
         $newBook->setTitle('My New Book');
-        $newBook->setIsbn(1234);
+        $newBook->setISBN(1234);
 
         // Kind of new collection
         $books   = clone $books;
@@ -465,7 +465,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         // Add a new object
         $newBook1 = new Book();
         $newBook1->setTitle('My New Book1');
-        $newBook1->setIsbn(1256);
+        $newBook1->setISBN(1256);
 
         // Existing collection - The fix around reference is tested here.
         // Ths `$books` collection has ever been setted to the `$bookClubList1` object.
@@ -532,7 +532,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
 
         $book = new Book();
         $book->setTitle('My Book');
-        $book->setIsbn('123452');
+        $book->setISBN('123452');
         $book->save();
 
         // Modify it but don't save it
@@ -574,7 +574,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         for ($i = 0; $i < 3; $i++) {
             $b = new Book();
             $b->setTitle('Title ' . $i);
-            $b->setIsbn('1245' . $i);
+            $b->setISBN('1245' . $i);
 
             $coll[] = $b;
         }
@@ -602,7 +602,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         for ($i = 0; $i < 3; $i++) {
             $b = new Book();
             $b->setTitle('Book ' . $i);
-            $b->setIsbn("043935806" . $i);
+            $b->setISBN("043935806" . $i);
             $b->save();
         }
 
@@ -655,7 +655,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         foreach (array('foo', 'bar') as $title) {
             $b = new Book();
             $b->setTitle($title);
-            $b->setIsbn('12553');
+            $b->setISBN('12553');
 
             $books[] = $b;
         }
@@ -673,7 +673,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         foreach (array('bam', 'bom') as $title) {
             $b = new Book();
             $b->setTitle($title);
-            $b->setIsbn('1345');
+            $b->setISBN('1345');
 
             $books[] = $b;
         }
@@ -702,7 +702,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         foreach (array('foo', 'bar', 'test') as $title) {
             $b = new Book();
             $b->setTitle($title);
-            $b->setIsbn('1345');
+            $b->setISBN('1345');
 
             $books[] = $b;
         }

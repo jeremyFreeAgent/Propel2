@@ -132,7 +132,7 @@ class ObjectFormatterWithTest extends BookstoreEmptyTestBase
         // save a book with no author
         $b = new Book();
         $b->setTitle('Foo');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save();
         $c = new ModelCriteria('bookstore', 'Propel\Tests\Bookstore\Book');
         $c->where('Propel\Tests\Bookstore\Book.Title = ?', 'Foo');
@@ -153,11 +153,11 @@ class ObjectFormatterWithTest extends BookstoreEmptyTestBase
         $a1->setFirstName('Foo');
         $b1 = new Book();
         $b1->setTitle('Foo1');
-        $b1->setIsbn("043935806X");
+        $b1->setISBN("043935806X");
         $a1->addBook($b1);
         $b2 = new Book();
         $b2->setTitle('Foo2');
-        $b2->setIsbn("043935806X");
+        $b2->setISBN("043935806X");
         $a1->addBook($b2);
         $a1->save();
         $con = Propel::getServiceContainer()->getConnection(BookPeer::DATABASE_NAME);
@@ -591,7 +591,7 @@ class ObjectFormatterWithTest extends BookstoreEmptyTestBase
         $book = new Book();
         $book->setAuthor($freud);
         $book->setTitle('Weirdness');
-        $book->setIsbn('abc123456');
+        $book->setISBN('abc123456');
         $book->setPrice('14.99');
         $book->setPublisher($publisher);
         $book->save();

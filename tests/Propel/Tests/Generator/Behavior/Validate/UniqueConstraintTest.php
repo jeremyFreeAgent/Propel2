@@ -53,7 +53,7 @@ class UniqueConstraintTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle("The return of Sherlock Holmes");
-        $book->setIsbn("043935806X");
+        $book->setISBN("043935806X");
         $this->assertTrue($book->validate());
     }
 
@@ -61,12 +61,12 @@ class UniqueConstraintTest extends BookstoreTestBase
     {
         $book = new Book();
         $book->setTitle("The return of Sherlock Holmes");
-        $book->setIsbn("043935806X");
+        $book->setISBN("043935806X");
         $book->save();
 
         $book1 = new Book();
         $book1->setTitle('Dracula');
-        $book1->setIsbn("043935806X");
+        $book1->setISBN("043935806X");
 
         $this->assertTrue($book1->validate());
 

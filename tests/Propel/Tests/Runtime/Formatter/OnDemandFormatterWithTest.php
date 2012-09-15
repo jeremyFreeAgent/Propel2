@@ -118,7 +118,7 @@ class OnDemandFormatterWithTest extends BookstoreEmptyTestBase
         // save a book with no author
         $b = new Book();
         $b->setTitle('Foo');
-        $b->setIsbn("043935806X");
+        $b->setISBN("043935806X");
         $b->save();
         $c = new ModelCriteria('bookstore', 'Propel\Tests\Bookstore\Book');
         $c->setFormatter(ModelCriteria::FORMAT_ON_DEMAND);
