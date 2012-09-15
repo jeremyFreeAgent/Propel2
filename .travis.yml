@@ -16,6 +16,6 @@ before_script:
   - php composer.phar install
 
   - php bin/propel test:prepare --vendor="$DB" --dsn="$DB:dbname=test" --user="$DB_USER"
-  - mysql -u$DB_USER -e 'select @@sql_mode'
+  - mysql -u$DB_USER -e 'show variables'
 
 #script: phpunit
