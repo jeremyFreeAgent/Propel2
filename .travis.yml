@@ -17,4 +17,4 @@ before_script:
 
   - php bin/propel test:prepare --vendor="$DB" --dsn="$DB:dbname=test" --user="$DB_USER"
 
-script: phpunit -v /Users/jeremyFreeAgent/GitHub/Propel2/tests/Propel/Tests/Ticket520Test.php
+script: phpunit -v tests/Propel/Tests/Ticket520Test.php
