@@ -16,6 +16,6 @@ before_script:
   - php composer.phar install
 
   - php bin/propel test:prepare --vendor="$DB" --dsn="$DB:dbname=test" --user="$DB_USER"
-  - mysql -u$DB_USER -e 'INSERT INTO author (ID, TITLE, AUTHOR_ID) VALUES ("1", "Title", null)'
+  - mysql -u$DB_USER -e 'USE test; INSERT INTO author (ID, TITLE, AUTHOR_ID) VALUES ("1", "Title", null);'
 
 script: phpunit -v tests/Propel/Tests/Ticket520Test.php
