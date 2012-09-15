@@ -720,7 +720,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('Don Juan');
-        $b->->setIsbn("043935806X");
+        $b->setIsbn("043935806X");
 
         $arr1 = $b->toArray();
         $expectedKeys = array(
@@ -739,7 +739,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('Don Juan');
-        $b->->setIsbn("043935806X");
+        $b->setIsbn("043935806X");
 
         $arr1 = $b->toArray(BasePeer::TYPE_COLNAME);
         $expectedKeys = array(
