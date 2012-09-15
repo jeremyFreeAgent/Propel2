@@ -602,6 +602,7 @@ class GeneratedObjectRelTest extends BookstoreEmptyTestBase
         for ($i = 0; $i < 3; $i++) {
             $b = new Book();
             $b->setTitle('Book ' . $i);
+            $b->setIsbn("043935806" . $i);
             $b->save();
         }
 

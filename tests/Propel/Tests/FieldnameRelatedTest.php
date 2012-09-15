@@ -248,6 +248,7 @@ class FieldnameRelatedTest extends \PHPUnit_Framework_TestCase
         );
 
         $book = new Book();
+        $book->setIsbn("043935806X");
         $book->setTitle('Harry Potter and the Order of the Phoenix');
 
         $expected = 'Harry Potter and the Order of the Phoenix';
@@ -350,17 +351,17 @@ class FieldnameRelatedTest extends \PHPUnit_Framework_TestCase
         $book = new Book();
         $book->fromArray(array (
             'Title' => 'Harry Potter and the Order of the Phoenix',
-            'ISBN' => '043935806X'
+            'Isbn' => '043935806X'
         ));
 
         $expecteds = array (
             BasePeer::TYPE_PHPNAME => array (
                 'Title' => 'Harry Potter and the Order of the Phoenix',
-                'ISBN' => '043935806X'
+                'Isbn' => '043935806X'
             ),
             BasePeer::TYPE_STUDLYPHPNAME => array (
                 'title' => 'Harry Potter and the Order of the Phoenix',
-                'iSBN' => '043935806X'
+                'isbn' => '043935806X'
             ),
             BasePeer::TYPE_COLNAME => array (
                 'book.TITLE' => 'Harry Potter and the Order of the Phoenix',

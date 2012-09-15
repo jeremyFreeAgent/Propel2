@@ -473,6 +473,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('foo');
+        $b->setIsbn("043935806X");
         $b->save();
         $this->assertFalse($b->isNew());
         $this->assertNotNull($b->getId());
@@ -719,12 +720,13 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('Don Juan');
+        $b->->setIsbn("043935806X");
 
         $arr1 = $b->toArray();
         $expectedKeys = array(
             'Id',
             'Title',
-            'ISBN',
+            'Isbn',
             'Price',
             'PublisherId',
             'AuthorId'
@@ -737,6 +739,7 @@ class GeneratedObjectTest extends BookstoreTestBase
     {
         $b = new Book();
         $b->setTitle('Don Juan');
+        $b->->setIsbn("043935806X");
 
         $arr1 = $b->toArray(BasePeer::TYPE_COLNAME);
         $expectedKeys = array(

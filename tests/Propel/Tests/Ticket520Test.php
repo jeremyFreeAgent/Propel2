@@ -32,10 +32,12 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         $b2 = new Book();
         $b2->setTitle("The Restaurant At The End Of The Universe");
+        $b2->setIsbn("043935806X");
         $a->addBook($b2);
 
         // Passing no Criteria means "use the internal collection or query the database"
@@ -52,10 +54,12 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         $b2 = new Book();
         $b2->setTitle("The Restaurant At The End Of The Universe");
+        $b2->setIsbn("043935806X");
         $a->addBook($b2);
 
         $c = new Criteria();
@@ -73,10 +77,12 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         $b2 = new Book();
         $b2->setTitle("The Restaurant At The End Of The Universe");
+        $b2->setIsbn("043935806X");
         $a->addBook($b2);
 
         $c = new Criteria();
@@ -96,10 +102,12 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         $b2 = new Book();
         $b2->setTitle("The Restaurant At The End Of The Universe");
+        $b2->setIsbn("043935806X");
         $a->addBook($b2);
 
         $c = new Criteria();
@@ -122,6 +130,7 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         $books = $a->getBooks();
@@ -150,6 +159,7 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         $books = $a->getBooks();
@@ -175,6 +185,7 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         /* Like testAddNewObjectAfterSaveWithPoisonedCache, but this time
@@ -196,10 +207,12 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b1->setIsbn("043935806X");
         $a->addBook($b1);
 
         $b2 = new Book();
         $b2->setTitle("The Restaurant At The End Of The Universe");
+        $b2->setIsbn("043935806X");
         $a->addBook($b2);
 
         /* As you cannot write $a->remove($b2), you have to delete $b2
@@ -235,11 +248,13 @@ class Ticket520Test extends BookstoreTestBase
 
         $b1 = new Book();
         $b1->setTitle("The Hitchhikers Guide To The Galaxy");
+        $b2->setIsbn("043935806X");
         $b1->setPublisher($p); // uh... did not check that :^)
         $a->addBook($b1);
 
         $b2 = new Book();
         $b2->setTitle("The Restaurant At The End Of The Universe");
+        $b2->setIsbn("043935806X");
         $b2->setPublisher($p);
         $a->addBook($b2);
 

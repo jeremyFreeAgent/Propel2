@@ -36,8 +36,10 @@ class ObjectCollectionTest extends BookstoreTestBase
         $col = new ObjectCollection();
         $book1 = new Book();
         $book1->setTitle('Foo');
+        $book1->setIsbn("0439358061");
         $book2 = new Book();
         $book2->setTitle('Bar');
+        $book2->setIsbn("0439358062");
         $col = new ObjectCollection();
         $this->assertFalse($col->contains($book1));
         $this->assertFalse($col->contains($book2));
@@ -78,6 +80,7 @@ class ObjectCollectionTest extends BookstoreTestBase
         for ($i=0; $i < 4; $i++) {
             $book = new Book();
             $book->setTitle('Title' . $i);
+            $book->setIsbn("043935806X" . $i);
             $book->save($this->con);
             $books []= $book;
         }
