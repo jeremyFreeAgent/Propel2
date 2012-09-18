@@ -993,6 +993,15 @@ class Criteria
         return $this;
     }
 
+    public function addJoinQuery(Join $join)
+    {
+        if (!in_array($join, $this->joins)) { // compare equality, NOT identity
+            $this->joins[] = $join;
+        }
+
+        return $this;
+    }
+
     /**
      * Get the array of Joins.
      * @return array Join[]
